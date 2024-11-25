@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Evolución de Apertura de la F.S.R{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Evolución de Apertura de la F.S.R</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        <div class="row mb-3">
+            <div class="col-md-5">
+                <label for="fecha_inicio" class="form-label">Desde:</label>
+                <input type="date" id="fecha_inicio" name="fecha_inicio" class="form-control" required>
+            </div>
+            <div class="col-md-5">
+                <label for="fecha_fin" class="form-label">Hasta:</label>
+                <input type="date" id="fecha_fin" name="fecha_fin" class="form-control" required>
+            </div>
+            <div class="col-md-2 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary w-100">Analizar</button>
+            </div>
+        </div>
+    </form>
+
+    {% if evolucion %}
+    <p>Desde: {{ fecha_inicio }} hasta: {{ fecha_fin }}</p>
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Apertura (cm)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in evolucion %}
+            <tr>
+                <td>{{ item.0 }}</td>
+                <td>{{ item.1 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</div>
+{% endblock %}

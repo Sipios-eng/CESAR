@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}C.E.S.A.R - Evolución de Apertura de la F.S.R{% endblock %}
+
+{% block content %}
+<!-- Page specific content -->
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Sistema de Análisis de la Evolución de Apertura de la F.S.R</h1>
+    <div class="row justify-content-center">
+        <!-- Formulario de selección de período -->
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="text-center">Seleccionar Período de Análisis</h4>
+                </div>
+                <div class="card-body">
+                    <form action="{% url 'evolucion_fsr_result2' %}" method="post">
+                        {% csrf_token %}
+                        <div class="form-group mb-3">
+                            <label for="fecha_inicio" class="form-label">Fecha de Inicio</label>
+                            <input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="fecha_fin" class="form-label">Fecha de Fin</label>
+                            <input type="date" class="form-control" id="fecha_fin" name="fecha_fin" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Analizar Evolución</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

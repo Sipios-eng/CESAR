@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}C.E.S.A.R - Funcionalidades{% endblock %}
+
+{% block content %}
+<!-- Page specific content -->
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Bienvenido al Sistema de Análisis C.E.S.A.R</h1>
+    <div class="row justify-content-center">
+        {% if user.is_authenticated %}
+            <!-- Botón para analizar la evolución de la F.S.R -->
+            {% if user.rol.nombre == "Analista" or user.rol.nombre == "Gerente" %}
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="text-center">Analizar Evolución de Apertura de la F.S.R</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <a href="{% url 'evolucion_fsr_result1' %}" class="btn btn-primary w-100">Seleccionar Período de Análisis</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Botón para generar reporte PDF -->
+            {% if user.rol.nombre == "Gerente" %}
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h4 class="text-center">Generar Reporte de la F.S.R</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <a href="{% url 'generar_reporte_fsr' %}" class="btn btn-success w-100 py-3">
+                            <img src="https://github.com/Cooounter/imagenes/blob/main/pdf-placeholder.png?raw=true" alt="Reportes" class="img-fluid me-2" style="max-width: 30px;">
+                            Generar Reporte F.S.R
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Botón para acceder a la nueva funcionalidad -->
+            {% if user.rol.nombre == "Analista" or user.rol.nombre == "Gerente" or user.rol.nombre == "Ingeniero de Terreno" %}
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-warning text-white">
+                        <h4 class="text-center">Sistema de Análisis del Efecto Dominó</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <a href="{% url 'efecto_domino' %}" class="btn btn-warning w-100">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        {% else %}
+            <div class="alert alert-warning text-center" role="alert">
+                Debes iniciar sesión para acceder a las funcionalidades.
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

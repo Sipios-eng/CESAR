@@ -1,0 +1,21 @@
+{"level":"info","time":"2024-11-25T03:25:12.608-0300","caller":"cmd/lt.go:207","msg":"LambdaTest Tunnel version: 3.2.8"}
+{"level":"error","time":"2024-11-25T03:25:13.945-0300","caller":"core/lifecycle.go:76","msg":"Unable to fetch remote config Error while fetching config, status code: 401"}
+{"level":"warn","time":"2024-11-25T03:25:13.945-0300","caller":"core/lifecycle.go:80","msg":"Please ensure https://ts.lambdatest.com is reachable from your network."}
+{"level":"info","time":"2024-11-25T03:25:18.661-0300","caller":"cmd/lt.go:207","msg":"LambdaTest Tunnel version: 3.2.8"}
+{"level":"error","time":"2024-11-25T03:25:20.185-0300","caller":"core/lifecycle.go:76","msg":"Unable to fetch remote config Error while fetching config, status code: 401"}
+{"level":"warn","time":"2024-11-25T03:25:20.186-0300","caller":"core/lifecycle.go:80","msg":"Please ensure https://ts.lambdatest.com is reachable from your network."}
+{"level":"info","time":"2024-11-25T03:26:39.512-0300","caller":"cmd/lt.go:207","msg":"LambdaTest Tunnel version: 3.2.8"}
+{"level":"error","time":"2024-11-25T03:26:40.961-0300","caller":"core/lifecycle.go:76","msg":"Unable to fetch remote config Error while fetching config, status code: 401"}
+{"level":"warn","time":"2024-11-25T03:26:40.962-0300","caller":"core/lifecycle.go:80","msg":"Please ensure https://ts.lambdatest.com is reachable from your network."}
+{"level":"info","time":"2024-11-25T03:27:25.228-0300","caller":"cmd/lt.go:207","msg":"LambdaTest Tunnel version: 3.2.8"}
+{"level":"error","time":"2024-11-25T03:27:26.118-0300","caller":"core/lifecycle.go:76","msg":"Unable to fetch remote config Error while fetching config, status code: 401"}
+{"level":"warn","time":"2024-11-25T03:27:26.118-0300","caller":"core/lifecycle.go:80","msg":"Please ensure https://ts.lambdatest.com is reachable from your network."}
+{"level":"info","time":"2024-11-25T03:28:47.599-0300","caller":"cmd/lt.go:207","msg":"LambdaTest Tunnel version: 3.2.8"}
+{"level":"error","time":"2024-11-25T03:28:49.002-0300","caller":"core/lifecycle.go:76","msg":"Unable to fetch remote config Error while fetching config, status code: 401"}
+{"level":"warn","time":"2024-11-25T03:28:49.002-0300","caller":"core/lifecycle.go:80","msg":"Please ensure https://ts.lambdatest.com is reachable from your network."}
+{"level":"info","time":"2024-11-25T03:36:08.016-0300","caller":"cmd/lt.go:207","msg":"LambdaTest Tunnel version: 3.2.8"}
+{"level":"error","time":"2024-11-25T03:36:10.487-0300","caller":"core/lifecycle.go:76","msg":"Unable to fetch remote config Error while fetching config, status code: 401"}
+{"level":"warn","time":"2024-11-25T03:36:10.487-0300","caller":"core/lifecycle.go:80","msg":"Please ensure https://ts.lambdatest.com is reachable from your network."}
+{"level":"info","time":"2024-11-25T03:39:15.786-0300","caller":"cmd/lt.go:207","msg":"LambdaTest Tunnel version: 3.2.8"}
+{"level":"error","time":"2024-11-25T03:39:16.643-0300","caller":"core/lifecycle.go:76","msg":"Unable to fetch remote config Error while fetching config, status code: 401"}
+{"level":"warn","time":"2024-11-25T03:39:16.644-0300","caller":"core/lifecycle.go:80","msg":"Please ensure https://ts.lambdatest.com is reachable from your network."}

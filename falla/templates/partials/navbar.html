@@ -1,0 +1,32 @@
+<nav class="navbarrcolor navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}">C.E.S.A.R</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center ms-2">
+                {% if user.is_authenticated %}
+                <!-- Formulario para cerrar sesión con método POST -->
+                <form method="POST" action="{% url 'cerrar_sesion' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger me-2">Cerrar Sesión</button>
+                </form>
+                {% else %}
+                <!-- Botones para iniciar sesión y registro -->
+                <a href="{% url 'iniciar_sesion' %}">
+                    <button type="button" class="btn btn-primary me-2">Iniciar Sesión</button>
+                </a>
+                <a href="{% url 'registrar' %}">
+                    <button type="button" class="btn btn-secondary me-2">Registrarse</button>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</nav>

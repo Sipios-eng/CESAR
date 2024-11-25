@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Análisis del Efecto Dominó en Sismos{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="my-4">Análisis del Efecto Dominó en Sismos</h1>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Lugar</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Magnitud</th>
+                    <th>Profundidad (km)</th>
+                    <th>Probabilidad de Efecto Dominó (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for sismo in sismos %}
+                    <tr>
+                        <td>{{ sismo.lugar }}</td>
+                        <td>{{ sismo.fecha }}</td>
+                        <td>{{ sismo.hora }}</td>
+                        <td>{{ sismo.magnitud }}</td>
+                        <td>{{ sismo.profundidad }}</td>
+                        <td>{{ sismo.probabilidad_efecto_domino }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

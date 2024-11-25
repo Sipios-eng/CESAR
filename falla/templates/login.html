@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Iniciar Sesión</h1>
+    <form method="POST" action="{% url 'iniciar_sesion' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+    </form>
+    {% if form.errors %}
+    <div class="alert alert-danger mt-3">
+        <p>Error de autenticación. Por favor, verifica tu usuario y contraseña.</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
